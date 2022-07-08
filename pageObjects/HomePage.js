@@ -9,7 +9,7 @@ class HomePage {
     }
 
     async goTo() {
-        await this.page.goto("https://automation.qa.manual.graduway.com/")
+        await this.page.goto("")
     }
 
     async openSignInOptions() {
