@@ -32,13 +32,13 @@ test.describe("@MM Business directory-->Post with Generic Image", () => {
                 port: 465,
                 secure: true,
                 auth: {
-                    user: 'suresh4qaexpert@gmail.com',//sender mail id
-                    pass: 'qsylpkqpdmzugnat'//suresh sender mail access password
+                    user: '',//sender mail id
+                    pass: ''//suresh sender mail access password
                 }
             });
             var mailOptions = {
-                from: 'suresh4qaexpert@gmail.com',//sender mail id
-                to: 'suresh4qaexpert@gmail.com',//receipient mail id
+                from: '',//sender mail id
+                to: '',//receipient mail id
                 subject: 'Test_Report',
                 text: 'Test_Report for Playwright tests',
                 attachments: [{

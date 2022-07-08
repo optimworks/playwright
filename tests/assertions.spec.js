@@ -3,7 +3,7 @@ const {test, expect} = require('@playwright/test')
 test("Assertions", async ({page}) => {
     await Promise.all([
         page.waitForNavigation(),
-        page.goto('https://automation.qa.manual.graduway.com/')
+        page.goto('')
     ]) 
     await page.waitForSelector('"Sign in"')
     await expect(page.isEnabled('"Sign in"')).toBeTruthy()

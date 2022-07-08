@@ -1,7 +1,7 @@
 const { test, expect } = require("@playwright/test")
 
 test("DropDowns", async ({ page }) => {
-    await page.goto("https://automation.qa.manual.graduway.com/")
+    await page.goto("")
     var openSignin = page.locator('[type="button"] span .material-icons')
     var userName = page.locator('[type="email"]')
     var password = page.locator('[type="password"]')
@@ -13,8 +13,8 @@ test("DropDowns", async ({ page }) => {
     var currentWindow = page.locator('[title="Current window"]')
 
     await openSignin.click()
-    await userName.fill('graduway041@gmail.com')
-    await password.fill('GraduwayAdmin123$')
+    await userName.fill('')
+    await password.fill('')
     await Promise.all([
         page.waitForNavigation(),
         signin.click()
@@ -46,7 +46,7 @@ test("DropDown", async ({ page }) => {
 })
 
 test("Checkbox", async ({ page }) => {
-    await page.goto("https://automation.qa.manual.graduway.com/")
+    await page.goto("")
     var openSignin = page.locator('[type="button"] span .material-icons')
     var linkedIn = page.locator('gw-login-social span').first()
     var userName = page.locator('[id="username"]')

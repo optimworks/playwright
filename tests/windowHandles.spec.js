@@ -3,7 +3,7 @@ const { test } = require("@playwright/test")
 test("Working on window handling", async ({ browser }) => {
     const context = await browser.newContext()
     const page = await context.newPage()
-    await page.goto("https://automation.qa.manual.graduway.com/")
+    await page.goto("")
     var openSignin = page.locator('text=Sign in')
     var userName = page.locator('[type="email"]')
     var password = page.locator('[type="password"]')
@@ -14,8 +14,8 @@ test("Working on window handling", async ({ browser }) => {
     var optionsButton = page.locator('gw-menu mat-icon').nth(0)
 
     await openSignin.click()
-    await userName.fill('graduway041@gmail.com')
-    await password.fill('GraduwayAdmin123$')
+    await userName.fill('')
+    await password.fill('')
     await Promise.all([
         page.waitForNavigation(),
         signin.click()

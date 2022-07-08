@@ -3,7 +3,7 @@ const { test, expect } = require("@playwright/test")
 test("Launch browser using context", async function ({ browser }) {
     const context = await browser.newContext()
     const page = await context.newPage()
-    await page.goto("https://automation.qa.manual.graduway.com/")
+    await page.goto("")
     console.log(await page.title());
     await expect(page).toHaveTitle('automationqa')
     var openSignin = page.locator('[type="button"] span .material-icons')
@@ -14,8 +14,8 @@ test("Launch browser using context", async function ({ browser }) {
     var text1 = page.locator('feed-read-more .gw-read-more-text div')
 
     await openSignin.click()
-    await userName.fill('graduway041@gmail.com')
-    await password.fill('GraduwayAdmin123$')
+    await userName.fill('')
+    await password.fill('')
     await Promise.all([
         page.waitForNavigation(),
         signin.click()
@@ -35,7 +35,7 @@ test("Launch browser using context", async function ({ browser }) {
 })
 
 test("Launch browser using page", async function ({ page }) {
-    await page.goto("https://automation.qa.manual.graduway.com/")
+    await page.goto("")
     console.log(await page.title())
     var openSignin = page.locator('[type="button"] span .material-icons')
     var userName = page.locator('[type="email"]')
@@ -45,8 +45,8 @@ test("Launch browser using page", async function ({ page }) {
     var text1 = page.locator('feed-read-more .gw-read-more-text div')
 
     await openSignin.click()
-    await userName.fill('graduway041@gmail.com')
-    await password.fill('GraduwayAdmin123$')
+    await userName.fill('')
+    await password.fill('')
     await Promise.all([
         page.waitForNavigation(),
         signin.click()
